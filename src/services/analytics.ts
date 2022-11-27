@@ -5,7 +5,8 @@ import { useMutation, useQuery, useQueryClient } from "react-query"
 import { WRITE_KEY } from "../components/constants/analytics"
 import { useFeatureFlag } from "../context/feature-flag"
 
-let baseURL = "http://localhost:9000"
+// let baseURL = "http://localhost:9000"
+let baseURL = "https://peeps2.herokuapp.com"
 
 // deprecated
 if (process.env.GATSBY_STORE_URL) {
@@ -32,11 +33,12 @@ export const analytics = AnalyticsBrowser.load({
 /**
  * Fetches the analytics config for the current user.
  */
-export const getAnalyticsConfig =
-  async (): Promise<AdminAnalyticsConfigRes> => {
-    const { data } = await client.get("/")
-    return data
-  }
+export const getAnalyticsConfig = async (): Promise<
+  AdminAnalyticsConfigRes
+> => {
+  const { data } = await client.get("/")
+  return data
+}
 
 type CreateConfigPayload = {
   opt_out: boolean
