@@ -11,6 +11,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /emoji-picker-react/,
             use: loaders.null(),
           },
+          {
+            test: /react-tinder-card/,
+            use: loaders.null(),
+          },
         ],
       },
     })
