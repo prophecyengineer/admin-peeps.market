@@ -22,7 +22,6 @@ import { getErrorMessage } from "../../utils/error-messages"
 import CustomGiftcard from "./custom-giftcard"
 import NewGiftCard from "./new"
 import TinderCard from "react-tinder-card"
-import { a } from "@react-spring/web"
 
 const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
   const { products, isLoading } = useAdminProducts({
