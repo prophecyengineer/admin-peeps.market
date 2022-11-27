@@ -11,7 +11,7 @@ const LoginLayout = ({ children }) => {
           }}
         >
           {children}
-          <div className="text-grey-0 inter-base-regular pb-12">
+          {/* <div className="text-grey-0 inter-base-regular pb-12">
             © Medusa Commerce <span>&#183;</span>{" "}
             <a
               style={{ color: "inherit", textDecoration: "none" }}
@@ -19,7 +19,7 @@ const LoginLayout = ({ children }) => {
             >
               Contact
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
