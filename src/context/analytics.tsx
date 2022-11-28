@@ -1,4 +1,4 @@
-import { globalHistory } from "@reach/router"
+// import { globalHistory } from "@reach/router"
 import { AnalyticsBrowser } from "@segment/analytics-next"
 import { useAdminGetSession, useAdminStore, useAdminUsers } from "medusa-react"
 import React, {
@@ -9,8 +9,8 @@ import React, {
   useMemo,
   useState,
 } from "react"
-import Fade from "../components/atoms/fade-wrapper"
-import AnalyticsPreferencesModal from "../components/organisms/analytics-preferences"
+// import Fade from "../components/atoms/fade-wrapper"
+// import AnalyticsPreferencesModal from "../components/organisms/analytics-preferences"
 import { useDebounce } from "../hooks/use-debounce"
 import { useAdminAnalyticsConfig } from "../services/analytics"
 import { useFeatureFlag } from "./feature-flag"
@@ -153,19 +153,19 @@ const AnalyticsProvider = ({ writeKey, children }: Props) => {
   }, [store, trackStoreName])
 
   // Track pages visited when location changes
-  useEffect(() => {
-    const unlisten = globalHistory.listen(() => {
-      if (!analytics) {
-        return
-      }
+  // useEffect(() => {
+  //   const unlisten = globalHistory.listen(() => {
+  //     if (!analytics) {
+  //       return
+  //     }
 
-      analytics.page()
-    })
+  //     analytics.page()
+  //   })
 
-    return () => {
-      unlisten()
-    }
-  }, [analytics])
+  //   return () => {
+  //     unlisten()
+  //   }
+  // }, [analytics])
 
   return (
     <AnalyticsContext.Provider
@@ -178,11 +178,11 @@ const AnalyticsProvider = ({ writeKey, children }: Props) => {
         setSubmittingConfig,
       }}
     >
-      {askPermission && (
+      {/* {askPermission && (
         <Fade isVisible={animateIn} isFullScreen={true}>
           <AnalyticsPreferencesModal />
         </Fade>
-      )}
+      )} */}
       {children}
     </AnalyticsContext.Provider>
   )
