@@ -50,7 +50,7 @@ const BodyCard: React.FC<BodyCardProps> = ({
         )}
       </div>
       <div
-        className="pt-medium px-xlarge flex flex-col grow overflow-y-auto"
+        className="table-container pt-medium px-xlarge flex flex-col grow overflow-y-auto"
         onScroll={scrollListener}
       >
         <div className="flex items-center justify-between mt-6 h-xlarge">

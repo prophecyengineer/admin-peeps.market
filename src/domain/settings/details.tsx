@@ -86,7 +86,7 @@ const AccountDetails = () => {
             className="mt-base"
             label="Store name"
             {...register("name")}
-            placeholder="Medusa Store"
+            placeholder="Your Peeps Market"
           />
           <h6 className="mt-2xlarge inter-base-semibold">Advanced settings</h6>
           <Input

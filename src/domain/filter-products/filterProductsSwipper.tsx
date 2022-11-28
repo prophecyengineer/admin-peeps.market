@@ -49,7 +49,7 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
       <div className="flex flex-col grow h-full pb-xlarge">
         {/* <PageDescription
           title="Gift Cards"
-          subtitle="Manage the Gift Cards of your Medusa store"
+          subtitle="Manage the Gift Cards of your peeps marketplace"
         /> */}
         {/* {!isLoading ? (
           <>
@@ -102,7 +102,8 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
                 style={{
                   backgroundImage: "url(" + product.thumbnail + ")",
                   height: "50vh",
-                  width: "50vw",
+                  width: "100%",
+                  maxWidth: "500px",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   position: "absolute",

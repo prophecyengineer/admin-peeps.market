@@ -58,7 +58,7 @@ const SettingsIndex = () => {
       />
       <SettingsCard
         heading={"The Team"}
-        description={"Manage users of your Medusa Store"}
+        description={"Manage users of your peeps marketplace"}
         icon={<UsersIcon />}
         to={`/a/settings/team`}
       />
@@ -68,12 +68,12 @@ const SettingsIndex = () => {
         icon={<HappyIcon />}
         to={`/a/settings/personal-information`}
       />
-      <SettingsCard
+      {/* <SettingsCard
         heading={"hello@medusajs.com"}
         description={"Can’t find the answers you’re looking for?"}
         icon={<MailIcon />}
         externalLink={"mailto: hello@medusajs.com"}
-      />
+      /> */}
       <SettingsCard
         heading={"Tax Settings"}
         description={"Manage taxes across regions and products"}

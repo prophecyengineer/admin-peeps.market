@@ -37,7 +37,7 @@ const SearchBar: React.FC = () => {
         className="flex basis-1/2 items-center px-small py-[6px]"
       >
         <SearchIcon className="text-grey-40" />
-        <div className="ml-5">
+        <div className="ml-5 search-icon">
           <OSShortcut macModifiers="⌘" winModifiers="Ctrl" keys="K" />
         </div>
         <span className="ml-xsmall text-grey-40 inter-base-regular">

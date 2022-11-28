@@ -95,7 +95,7 @@ const Table = React.forwardRef<HTMLTableElement, TableProps>(
             )}
           </div>
         </div>
-        <div className="relative">
+        <div className="relative overflow-x-auto">
           <table
             ref={ref}
             className={clsx("w-full table-auto", className)}

@@ -455,3 +455,17 @@
 .remove-number-spinner {
   -moz-appearance: textfield;
 }
+
+@media screen and (max-width: 600px) {
+  .min-w-sidebar {
+    display: none;
+  }
+
+  .search-icon {
+    display: none;
+  }
+}
+
+.table-container {
+  max-width: 93vw;
+}

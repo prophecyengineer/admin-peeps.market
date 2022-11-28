@@ -1,8 +1,8 @@
 import { QueryClient } from "react-query"
 
-// let medusaUrl = "http://localhost:9000"
+let medusaUrl = "http://localhost:9000"
 
-let medusaUrl = "https://peeps2.herokuapp.com"
+// let medusaUrl = "https://peeps2.herokuapp.com"
 
 
 // deprecated

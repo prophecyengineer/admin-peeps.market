@@ -84,7 +84,7 @@ const Overview: React.FC<RouteComponentProps> = () => {
       <div className="flex flex-col grow h-full pb-xlarge">
         <PageDescription
           title="Gift Cards"
-          subtitle="Manage the Gift Cards of your Medusa store"
+          subtitle="Manage the Gift Cards of your peeps marketplace"
         />
         {!isLoading ? (
           <>
