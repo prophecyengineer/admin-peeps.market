@@ -469,3 +469,25 @@
 .table-container {
   max-width: 93vw;
 }
+
+.bg-grey-5,
+.bg-brand {
+  background-color: #d9d9d4;
+}
+
+.min-w-sidebar {
+}
+
+.text-violet-50 {
+  background: #ffffff5c;
+}
+
+.h-full .text-violet-60,
+.h-full > .items-center.bg-grey-0,
+.min-w-sidebar {
+  background-color: #d9d9d4;
+}
+
+.search-icon > .text-grey-40 {
+  color: black;
+}
