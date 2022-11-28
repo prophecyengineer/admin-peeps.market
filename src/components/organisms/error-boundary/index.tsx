@@ -35,14 +35,12 @@ class ErrorBoundary extends React.Component<Props, State> {
   }
 
   public async componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const shouldTrack = await shouldTrackEvent(error)
-
-    if (!shouldTrack) {
-      return
-    }
-
-    const properties = getTrackingInfo(error, errorInfo)
-    analytics.track("error", properties)
+    // const shouldTrack = await shouldTrackEvent(error)
+    // if (!shouldTrack) {
+    //   return
+    // }
+    // const properties = getTrackingInfo(error, errorInfo)
+    // analytics.track("error", properties)
   }
 
   public dismissError = () => {
