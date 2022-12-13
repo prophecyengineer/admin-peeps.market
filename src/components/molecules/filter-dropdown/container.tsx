@@ -61,7 +61,7 @@ const FilterDropdownContainer: React.FC<FilterDropdownContainerProps> = ({
           <Button
             tabIndex={-1}
             variant="primary"
-            className="w-44 justify-center"
+            className="w-44 button justify-center"
             size="small"
             onClick={() => onSubmit()}
           >

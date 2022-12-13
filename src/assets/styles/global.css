@@ -476,9 +476,10 @@
   -moz-appearance: textfield;
 }
 
-.bg-grey-5,
-.bg-brand {
-  /* background-color: #fbfd08; */
+.funkyBG {
+  /* backgroun/d-color: #fbfd08; */
+  background-image: url("https://uploads-ssl.webflow.com/638f3688a84615c3f517a53b/63975419b98a9af77a1efda3_1.png");
+  background-size: contain;
 }
 
 .min-h-topbar {
@@ -524,7 +525,7 @@
 .h-full .text-violet-60,
 .h-full > .items-center.bg-grey-0,
 .min-w-sidebar {
-  background-color: #fff;
+  /* background-color: #fff; */
   /* color: black; */
   border: none;
 }
