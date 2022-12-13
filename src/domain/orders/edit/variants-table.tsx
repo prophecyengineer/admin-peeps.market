@@ -66,7 +66,7 @@ const VariantsTable: React.FC<Props> = (props) => {
                 {original.product.thumbnail ? (
                   <img
                     src={original.product.thumbnail}
-                    className="h-full object-cover rounded-soft"
+                    // className="h-full object-cove/r rounded-soft"
                   />
                 ) : (
                   <ImagePlaceholder />

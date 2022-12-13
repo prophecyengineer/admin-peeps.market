@@ -64,11 +64,11 @@ const useProductTableColumn = ({ setTileView, setListView, showList }) => {
         Cell: ({ row: { original } }) => {
           return (
             <div className="flex items-center">
-              <div className="h-[40px] w-[30px] my-1.5 flex items-center mr-4">
+              <div className="h-[80px] w-[80px] my-1.5 flex items-center mr-4">
                 {original.thumbnail ? (
                   <img
                     src={original.thumbnail}
-                    className="h-full object-cover rounded-soft"
+                    className="h-full w-full object-cover rounded-soft"
                   />
                 ) : (
                   <ImagePlaceholder />

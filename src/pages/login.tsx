@@ -1,9 +1,9 @@
-import clsx from "clsx"
+// import clsx from "clsx"
 import React, { useState } from "react"
-import MedusaIcon from "../components/fundamentals/icons/medusa-icon"
+// import MedusaIcon from "../components/fundamentals/icons/medusa-icon"
 import LoginCard from "../components/organisms/login-card"
-import ResetTokenCard from "../components/organisms/reset-token-card"
-import SEO from "../components/seo"
+// import ResetTokenCard from "../components/organisms/reset-token-card"
+// import SEO from "../components/seo"
 import LoginLayout from "../components/templates/login-layout"
 
 const LoginPage = () => {
@@ -11,7 +11,8 @@ const LoginPage = () => {
 
   return (
     <LoginLayout>
-      <SEO title="Login" />
+      <LoginCard toResetPassword={() => setResetPassword(true)} />
+      {/* <SEO title="Login" />
       <div className="flex h-full w-full items-center justify-center">
         <div
           className={clsx(
@@ -30,7 +31,7 @@ const LoginPage = () => {
             )}
           </div>
         </div>
-      </div>
+      </div> */}
     </LoginLayout>
   )
 }

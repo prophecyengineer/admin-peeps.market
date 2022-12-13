@@ -2,6 +2,22 @@
 @tailwind components;
 
 @font-face {
+  font-family: "Switzer";
+  src: url("../../fonts/Switzer-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer-Bold";
+  src: url("../../fonts/Switzer-Bold.ttf") format("truetype");
+  /* font-weight: 600; */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Inter";
   src: url("../../fonts/Inter-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -42,9 +58,11 @@
 @layer components {
   .inter-5xlarge-regular {
     @apply font-sans text-5xlarge leading-4xlarge font-normal;
+    font-family: "Switzer";
   }
   .inter-5xlarge-semibold {
     @apply font-sans text-5xlarge leading-4xlarge font-semibold;
+    font-family: "Switzer-Bold";
   }
 
   .inter-4xlarge-regular {
@@ -59,6 +77,7 @@
   }
   .inter-3xlarge-semibold {
     @apply font-sans text-3xlarge leading-2xlarge font-semibold;
+    font-family: "Switzer-Bold";
   }
 
   .inter-2xlarge-regular {
@@ -91,6 +110,7 @@
 
   .inter-small-regular {
     @apply font-sans text-small leading-small font-normal;
+    font-size: 15px;
   }
   .inter-small-semibold {
     @apply font-sans text-small leading-small font-semibold;
@@ -456,38 +476,129 @@
   -moz-appearance: textfield;
 }
 
-@media screen and (max-width: 600px) {
-  .min-w-sidebar {
-    display: none;
-  }
-
-  .search-icon {
-    display: none;
-  }
-}
-
-.table-container {
-  max-width: 93vw;
-}
-
 .bg-grey-5,
 .bg-brand {
-  background-color: #d9d9d4;
+  /* background-color: #fbfd08; */
 }
 
-.min-w-sidebar {
+.min-h-topbar {
+  border-bottom: 3px solid #000;
+  background-color: #fff;
 }
 
 .text-violet-50 {
-  background: #ffffff5c;
+  border: #000 solid 3px;
+  color: #000;
+  background-color: #fbfd08;
+}
+
+.text-violet-60 {
+  border: #000 solid 3px;
+  color: #000;
+  background-color: #fbfd08;
+}
+
+.shadow-violet-60 {
+  --tw-shadow-color: #000;
+  /* --tw-shadow: #000; */
+  /* border-radius: 0px; */
+}
+
+.rounded-circle {
+  /* border: #000 solid 3px; */
+}
+
+.border-b {
+  border: none;
+}
+
+.border-t {
+  border: none;
+}
+
+.pl-2\.5 {
+  color: black;
+  padding-left: 0.625rem;
 }
 
 .h-full .text-violet-60,
 .h-full > .items-center.bg-grey-0,
 .min-w-sidebar {
-  background-color: #d9d9d4;
+  background-color: #fff;
+  /* color: black; */
+  border: none;
 }
 
 .search-icon > .text-grey-40 {
   color: black;
+}
+
+.max-h-topbar {
+  border-bottom: 3px solid #000;
+}
+
+.table-container {
+  max-width: 93vw;
+  border: 4px solid;
+}
+
+.blackBorder {
+  border: 3px solid #000;
+}
+
+.min-w-sidebar {
+  border-right: 3px solid #000;
+  /* background: #000; */
+  color: #fff;
+}
+
+h1 {
+  font-family: "Switzer-Bold" !important;
+}
+
+p {
+  font-family: "Switzer" !important;
+}
+
+.logo {
+  font-size: 16px;
+  font-family: "Switzer-Bold";
+  color: #000;
+  text-shadow: -1px 1px 0 #fbfd08, -1px 1px 0 #fbfd08;
+}
+
+.logoEnd {
+  font-family: "Switzer";
+}
+
+.logoBox {
+  color: #000;
+  display: flex;
+  align-content: left;
+  justify-content: left;
+  margin-bottom: 5px;
+}
+
+.button {
+  border: #000 solid 3px;
+  color: #000;
+  background-color: #fbfd08;
+  border-radius: 0px !important;
+  font-family: "Switzer-Bold";
+}
+
+.p-large {
+  border: 3px solid;
+}
+
+/* .h-full .text-violet-60,
+.h-full > .items-center.bg-grey-0,
+.min-w-sidebar {
+  border-right: 3px solid #000;
+} */
+
+.min-w-sidebar {
+  /* border-right: 3px solid #000; */
+  /* background: #000; */
+  color: #fff;
 }
