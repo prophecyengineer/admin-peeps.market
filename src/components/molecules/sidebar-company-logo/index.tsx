@@ -12,8 +12,7 @@ const SidebarCompanyLogo: React.FC<SidebarCompanyLogoProps> = ({
       {/* <div className="w-[32px] h-[32px] flex items-center justify-center bg-grey-90 text-grey-0 rounded">
         <div>{storeName?.slice(0, 1) || "M"}</div>
       </div> */}
-      <span className="logo ">peeps.</span>
-      <span className="logoEnd ">market</span>
+      <img src="/logo.png" width="60px"></img>
     </div>
   )
 }

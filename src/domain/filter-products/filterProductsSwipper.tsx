@@ -27,11 +27,11 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
   const { products, isLoading } = useAdminProducts({
     is_giftcard: false,
   })
-  const filtered = products?.filter((product) => {
-    return (
-      product.tags?.filter((tag) => tag.value.includes("featured_")).length > 0
-    )
-  })
+  // const filtered = products?.filter((product) => {
+  //   return (
+  //     product.tags?.filter((tag) => tag.value.includes("featured_")).length > 0
+  //   )
+  // })
   const { store } = useAdminStore()
 
   const [lastDirection, setLastDirection] = useState()
@@ -45,8 +45,8 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
     console.log(name + " left the screen!")
   }
   return (
-    <>
-      <div className="flex flex-col grow h-full pb-xlarge">
+    <div className="containerHundred">
+      <div className="swiperContainer">
         {/* <PageDescription
           title="Gift Cards"
           subtitle="Manage the Gift Cards of your peeps marketplace"
@@ -90,8 +90,8 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
           </div>
         )} */}
 
-        {filtered &&
-          filtered.map((product, index) => (
+        {products &&
+          products.map((product, index) => (
             <TinderCard
               className="swipe"
               key={product.title}
@@ -110,7 +110,7 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
                 }}
                 className="card"
               >
-                <h3>{product.title}</h3>
+                <h3 className="swipeTitle">{product.title}</h3>
               </div>
             </TinderCard>
           ))}
@@ -163,7 +163,7 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
           heading="Delete Gift Card"
         />
       )} */}
-    </>
+    </div>
   )
 }
 

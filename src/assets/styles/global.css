@@ -477,26 +477,35 @@
 }
 
 .funkyBG {
-  /* backgroun/d-color: #fbfd08; */
-  background-image: url("https://uploads-ssl.webflow.com/638f3688a84615c3f517a53b/63975419b98a9af77a1efda3_1.png");
-  background-size: contain;
+  background-color: #d2d2d2;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  background-size: 181.5px;
+}
+
+.min-h-\[24px\] {
+  min-height: 0px !important;
 }
 
 .min-h-topbar {
-  border-bottom: 3px solid #000;
-  background-color: #fff;
+  border-bottom: 1.5px solid #000;
+  background-color: #d2d2d2;
+}
+
+.rounded-soft {
+  border-radius: 10px;
+  border: 1.5px solid black;
 }
 
 .text-violet-50 {
-  border: #000 solid 3px;
+  border: #000 solid 1.5px;
   color: #000;
-  background-color: #fbfd08;
+  background-color: #baff29;
 }
 
 .text-violet-60 {
-  border: #000 solid 3px;
+  border: #000 solid 1.5px;
   color: #000;
-  background-color: #fbfd08;
+  background-color: #baff29;
 }
 
 .shadow-violet-60 {
@@ -506,7 +515,7 @@
 }
 
 .rounded-circle {
-  /* border: #000 solid 3px; */
+  /* border: #000 solid 1.5px; */
 }
 
 .border-b {
@@ -530,27 +539,55 @@
   border: none;
 }
 
+.bg-grey-0 {
+  background-color: transparent;
+}
+
+.border {
+  border-width: 0px;
+}
+
 .search-icon > .text-grey-40 {
   color: black;
 }
 
 .max-h-topbar {
-  border-bottom: 3px solid #000;
+  border-bottom: 1.5px solid #000;
+  background-color: #d2d2d2;
 }
 
 .table-container {
   max-width: 93vw;
-  border: 4px solid;
+  border: 1.5px solid black;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.398);
+  margin-bottom: 70px;
+  backdrop-filter: blur(40px);
+}
+
+.caret-violet-60 {
+  background-color: rgba(255, 255, 255, 0.398);
+}
+
+.shadow-dropdown {
+  border: 1.5px solid black;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.398);
+  backdrop-filter: blur(40px);
 }
 
 .blackBorder {
-  border: 3px solid #000;
+  border-radius: 20px;
+
+  background-color: rgba(255, 255, 255, 0.398);
+  backdrop-filter: blur(40px);
+  border: 1.5px solid #000;
 }
 
 .min-w-sidebar {
-  border-right: 3px solid #000;
+  border-right: 1.5px solid #000;
   /* background: #000; */
-  color: #fff;
+  background-color: #d2d2d2;
 }
 
 h1 {
@@ -565,7 +602,7 @@ p {
   font-size: 16px;
   font-family: "Switzer-Bold";
   color: #000;
-  text-shadow: -1px 1px 0 #fbfd08, -1px 1px 0 #fbfd08;
+  text-shadow: -1px 1px 0 #baff29, -1px 1px 0 #baff29;
 }
 
 .logoEnd {
@@ -581,25 +618,58 @@ p {
 }
 
 .button {
-  border: #000 solid 3px;
+  border: #000 solid 1.5px;
   color: #000;
-  background-color: #fbfd08;
+  background-color: #baff29;
   border-radius: 0px !important;
   font-family: "Switzer-Bold";
 }
 
 .p-large {
-  border: 3px solid;
+  border: 1.5px solid;
 }
 
 /* .h-full .text-violet-60,
 .h-full > .items-center.bg-grey-0,
 .min-w-sidebar {
-  border-right: 3px solid #000;
+  border-right: 1.5px solid #000;
 } */
 
 .min-w-sidebar {
-  /* border-right: 3px solid #000; */
+  /* border-right: 1.5px solid #000; */
   /* background: #000; */
-  color: #fff;
+  color: #d2d2d2;
+}
+
+.text-grey-50 {
+  color: #000;
+}
+
+.card {
+  border: #000 1.5px solid;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.swipeTitle {
+  font-size: 19px;
+  margin-bottom: 22px;
+}
+
+.swiperContainer {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 453px;
+  padding: 60px;
+  margin-left: 100px;
+  /* background-color: #baff29 !important; */
+}
+
+.containerHundred {
+  width: 80vw !important;
+  height: 600px;
+  overflow: hidden !important;
 }
