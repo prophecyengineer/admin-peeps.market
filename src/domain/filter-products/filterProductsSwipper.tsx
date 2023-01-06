@@ -23,27 +23,106 @@ import CustomGiftcard from "./custom-giftcard"
 import NewGiftCard from "./new"
 import TinderCard from "react-tinder-card"
 
+const db = [
+  {
+    name: "Richard Hendricks",
+    url: "https://bit.ly/2QpRnmO",
+  },
+  {
+    name: "Erlich Bachman",
+    url: "https://bit.ly/2S67yWL",
+  },
+  {
+    name: "Monica Hall",
+    url: "https://bit.ly/3vfVFMf",
+  },
+  {
+    name: "Jared Dunn",
+    url: "https://bit.ly/3vfVFMf",
+  },
+  {
+    name: "Dinesh Chugtai",
+    url: "https://bit.ly/3dQZNMT",
+  },
+]
+
+const alreadyRemoved: string[] = []
+let charactersState = db // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
+
 const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
   const { products, isLoading } = useAdminProducts({
     is_giftcard: false,
   })
-  // const filtered = products?.filter((product) => {
-  //   return (
-  //     product.tags?.filter((tag) => tag.value.includes("featured_")).length > 0
-  //   )
-  // })
-  const { store } = useAdminStore()
+  // // const filtered = products?.filter((product) => {
+  // //   return (
+  // //     product.tags?.filter((tag) => tag.value.includes("featured_")).length > 0
+  // //   )
+  // // })
+  // const { store } = useAdminStore()
 
-  const [lastDirection, setLastDirection] = useState()
+  // const [lastDirection, setLastDirection] = useState()
 
-  const swiped = (direction, nameToDelete) => {
+  // const swiped = (direction, nameToDelete) => {
+  //   console.log("removing: " + nameToDelete)
+  //   setLastDirection(direction)
+  // }
+
+  // const outOfFrame = (name) => {
+  //   console.log(name + " left the screen!")
+  // }
+
+  // const swipe = (dir) => {
+  //   setLastDirection(dir)
+  // }
+
+  const [characters, setCharacters] = useState(db)
+
+  const childRefs = useMemo(
+    () =>
+      Array(db.length)
+        .fill(0)
+        .map(() => React.createRef()),
+    []
+  )
+
+  const swiped = (direction: string, nameToDelete: string) => {
     console.log("removing: " + nameToDelete)
-    setLastDirection(direction)
+    // setLastDirection(direction);
+    alreadyRemoved.push(nameToDelete)
   }
 
-  const outOfFrame = (name) => {
+  const outOfFrame = (name: string) => {
     console.log(name + " left the screen!")
+
+    charactersState = charactersState.filter(
+      (character) => character.name !== name
+    )
+
+    setCharacters(charactersState)
   }
+
+  const swipe = (dir: string) => {
+    const cardsLeft = characters.filter(
+      (person) => !alreadyRemoved.includes(person.name)
+    )
+
+    if (cardsLeft.length) {
+      // Find the card object to be removed
+      const toBeRemoved = cardsLeft[cardsLeft.length - 1].name
+
+      // Find the index of which to make the reference to
+      const index = db.map((person) => person.name).indexOf(toBeRemoved)
+
+      // Make sure the next card gets removed next time if this card do not have time to exit the screen
+      alreadyRemoved.push(toBeRemoved)
+
+      // Swipe the card!
+      childRefs[index].current.swipe(dir)
+    }
+  }
+
+  console.log("characters", characters)
+  console.log("characters", characters)
   return (
     <div className="containerHundred">
       <div className="swiperContainer">
@@ -89,7 +168,7 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
             <Spinner variant="secondary" size="large" />
           </div>
         )} */}
-
+        {/*
         {products &&
           products.map((product, index) => (
             <TinderCard
@@ -113,43 +192,34 @@ const FilterProductsSwipper: React.FC<RouteComponentProps> = () => {
                 <h3 className="swipeTitle">{product.title}</h3>
               </div>
             </TinderCard>
-          ))}
+          ))} */}
+        <div>
+          <div className="cardContainer">
+            {characters.map((character, index) => (
+              <TinderCard
+                ref={childRefs[index]}
+                className="swipe"
+                key={character.name}
+                onSwipe={(dir: string) => swiped(dir, character.name)}
+                onCardLeftScreen={() => outOfFrame(character.name)}
+              >
+                <div
+                  style={{ backgroundImage: "url(" + character.url + ")" }}
+                  className="card"
+                >
+                  <h3>{character.name}</h3>
+                </div>
+              </TinderCard>
+            ))}
+          </div>
 
-        {/* <div
-          style={{
-            top: "63vh",
-            position: "absolute",
-          }}
-          className="buttons"
-        >
-          <button
-            style={{ backgroundColor: !canSwipe && "#c3c4d3" }}
-            onClick={() => swipe("left")}
-          >
-            Swipe left!
-          </button>
-          <button
-            style={{ backgroundColor: !canGoBack && "#c3c4d3" }}
-            onClick={() => goBack()}
-          >
-            Undo swipe!
-          </button>
-          <button
-            style={{ backgroundColor: !canSwipe && "#c3c4d3" }}
-            onClick={() => swipe("right")}
-          >
-            Swipe right!
-          </button>
-        </div> */}
-        {/* </div> */}
-        {/* <TinderCard
-          onSwipe={onSwipe}
-          onCardLeftScreen={() => onCardLeftScreen("fooBar")}
-          preventSwipe={["right", "left"]}
-        >
-          Hello, World!
-        </TinderCard> */}
+          <div className="buttons">
+            <button onClick={() => swipe("left")}>Swipe left!</button>
+            <button onClick={() => swipe("right")}>add to marketplace</button>
+          </div>
+        </div>
       </div>
+
       {/* {showCreateCustom && (
         <CustomGiftcard onDismiss={() => setShowCreateCustom(false)} />
       )} */}

@@ -161,7 +161,7 @@ const ProductsFilter = ({
             }}
           >
             <div
-              className={`w-5 h-5 flex justify-center border-grey-30 border text-grey-0 rounded-base ${
+              className={`w-5 h-5 flex justify-center  border-2 border-slate-700	 text-grey-0 rounded-base ${
                 tempState.tags.open && "bg-violet-60"
               }`}
             >
@@ -177,12 +177,7 @@ const ProductsFilter = ({
                 checked={tempState.tags.open}
               />
             </div>
-            <span
-              className={clsx("text-grey-90 ml-2", {
-                "inter-small-semibold": tempState.tags.open,
-                "inter-small-regular": !tempState.tags.open,
-              })}
-            >
+            <span className={clsx("text-grey-90 ml-2 inter-small-regular")}>
               Tags
             </span>
           </div>

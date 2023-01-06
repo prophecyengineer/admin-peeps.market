@@ -26,7 +26,7 @@ const Section = ({
   return (
     <div
       className={clsx(
-        "px-xlarge pt-large pb-xlarge  bg-grey-0 blackBorder ",
+        "px-xlarge pt-large pb-xlarge bgPink  blackBorder ",
         className
       )}
     >

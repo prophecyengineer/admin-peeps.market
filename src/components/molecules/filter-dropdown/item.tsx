@@ -83,12 +83,7 @@ const FilterDropdownItem = ({
   }
 
   return (
-    <div
-      className={clsx("w-full cursor-pointer", {
-        "inter-small-semibold": open,
-        "inter-small-regular": !open,
-      })}
-    >
+    <div className={clsx("w-full cursor-pointer inter-small-regular")}>
       <RadixCollapsible.Root
         className="w-full"
         open={open}
@@ -96,16 +91,12 @@ const FilterDropdownItem = ({
       >
         <RadixCollapsible.Trigger
           className={clsx(
-            "py-1.5 px-3 flex w-full items-center hover:bg-grey-5 rounded justify-between",
-            {
-              "inter-small-semibold": open,
-              "inter-small-regular": !open,
-            }
+            "py-1.5 px-3 flex w-full items-center hover:bg-grey-5 rounded justify-between inter-small-regular"
           )}
         >
           <div className="flex items-center">
             <div
-              className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border rounded-base ${
+              className={`w-5 h-5 flex justify-center text-grey-0 border-2 border-slate-700	  rounded-base ${
                 open && "bg-violet-60"
               }`}
             >
@@ -167,17 +158,13 @@ const FilterDropdownItem = ({
               return (
                 <div
                   className={clsx(
-                    "w-full flex hover:bg-grey-20 my-1 py-1.5 pl-6 items-center rounded",
-                    {
-                      "inter-small-semibold": checked[value],
-                      "inter-small-regular": !checked[value],
-                    }
+                    "w-full flex hover:bg-grey-20 my-1 py-1.5 pl-6 items-center rounded inter-small-regular"
                   )}
                   key={i}
                   onClick={() => onCheck(value)}
                 >
                   <div
-                    className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border mr-2 rounded-base ${
+                    className={`w-5 h-5 flex justify-center text-grey-0 border-2 border-slate-700	  mr-2 rounded-base ${
                       checked[value] === true && "bg-violet-60"
                     }`}
                   >
@@ -509,11 +496,7 @@ const PopoverOptions = ({ options, onClick, selectedItem }) => {
             onClick(item)
           }}
           className={clsx(
-            "px-3 py-1.5 my-1 flex items-center rounded hover:bg-grey-5 cursor-pointer",
-            {
-              "inter-small-semibold": item === selectedItem,
-              "inter-small-regular": item !== selectedItem,
-            }
+            "px-3 py-1.5 my-1 flex items-center rounded hover:bg-grey-5 cursor-pointer inter-small-regular"
           )}
         >
           <div

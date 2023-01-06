@@ -216,7 +216,9 @@ const TagInput: React.FC<TagInputProps> = ({
                 onBlur={handleBlur}
                 onKeyDown={handleKeyDown}
                 onChange={handleInput}
-                className={clsx("focus:outline-none bg-transparent flex-1")}
+                className={clsx(
+                  "focus:outline-none bg-transparent flex-1 inter-small-regular"
+                )}
                 placeholder={values?.length ? "" : placeholder} // only visible if no tags exist
                 {...props}
               />

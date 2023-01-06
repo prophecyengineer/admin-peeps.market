@@ -81,17 +81,19 @@
   }
 
   .inter-2xlarge-regular {
-    @apply font-sans text-2xlarge leading-xlarge font-normal;
+    @apply text-2xlarge leading-xlarge font-normal;
   }
   .inter-2xlarge-semibold {
-    @apply font-sans text-2xlarge leading-xlarge font-semibold;
+    @appply text-2xlarge leading-xlarge font-semibold;
   }
 
   .inter-xlarge-regular {
-    @apply font-sans text-xlarge leading-large font-normal;
+    @apply text-xlarge leading-large font-normal;
+    font-family: "Switzer-Bold";
   }
   .inter-xlarge-semibold {
-    @apply font-sans text-xlarge leading-large font-semibold;
+    @apply text-xlarge leading-large font-semibold;
+    font-family: "Switzer-Bold";
   }
 
   .inter-large-regular {
@@ -110,7 +112,7 @@
 
   .inter-small-regular {
     @apply font-sans text-small leading-small font-normal;
-    font-size: 15px;
+    font-size: 14px;
   }
   .inter-small-semibold {
     @apply font-sans text-small leading-small font-semibold;
@@ -235,12 +237,6 @@
       @apply w-full mt-0 min-w-[120px] pt-0 !important;
     }
 
-    .react-select__option,
-    .react-select__option--is-focused,
-    .react-select__option--is-selected {
-      @apply bg-grey-0 hover:bg-grey-5 !important;
-    }
-
     .react-select__multi-value,
     .react-select__input-container {
       @apply my-0 py-0;
@@ -258,7 +254,9 @@
   }
 
   .badge-primary {
-    @apply bg-violet-60 bg-opacity-10 text-violet-60;
+    @apply bg-opacity-10;
+    background-color: #f89b77 !important;
+    color: #2a221f;
   }
 
   .badge-danger {
@@ -282,11 +280,13 @@
   }
 
   .btn {
-    @apply flex items-center justify-center rounded-rounded focus:outline-none focus:shadow-cta;
+    @apply flex items-center justify-center focus:outline-none focus:shadow-cta;
+    border-radius: 10px !important;
   }
 
   .btn-large {
     @apply inter-base-semibold px-large py-small;
+    border-radius: 10px !important;
   }
 
   .btn-medium {
@@ -298,15 +298,41 @@
   }
 
   .btn-primary {
-    @apply bg-violet-60 text-grey-0 hover:bg-violet-50 active:bg-violet-70  disabled:bg-grey-20 disabled:text-grey-40;
+    @apply disabled:bg-grey-20 disabled:text-grey-40;
+    background-color: #f89b77;
+    color: #2a221f;
+    border: 2px #2a221f solid !important;
+    font-family: "Switzer";
+    border-radius: 10px !important;
+  }
+
+  .btn-primary:hover {
+    background: #e08b69 !important;
+    background-color: #e08b69 !important;
+  }
+
+  .btn-primary:active {
+    background: #e08b69 !important;
+    background-color: #e08b69 !important;
   }
 
   .btn-secondary {
-    @apply bg-grey-0 text-grey-90 border border-grey-20 hover:bg-grey-5 active:bg-grey-5 active:text-violet-60  focus:border-violet-60 disabled:bg-grey-0 disabled:text-grey-30;
+    @apply text-grey-90   disabled:bg-grey-0 disabled:text-grey-30;
+    color: #2a221f;
+    border: 2px #2a221f solid !important;
+    background-color: #d7dadd;
+  }
+
+  .btn-secondary:hover {
+    background-color: #f1f3f5 !important;
+  }
+  .btn-secondary:active {
+    background-color: #f1f3f5 !important;
   }
 
   .btn-danger {
-    @apply bg-grey-0 text-rose-50 border border-grey-20 hover:bg-grey-10 active:bg-grey-20 disabled:bg-grey-0 disabled:text-grey-30;
+    @apply text-rose-50 border border-grey-20 hover:bg-grey-10 active:bg-grey-20 disabled:bg-grey-0 disabled:text-grey-30;
+    background-color: #d7dadd;
   }
 
   .btn-nuclear {
@@ -387,7 +413,9 @@
     }
     .chosen,
     .react-datepicker__day--keyboard-selected {
-      @apply bg-violet-60 text-grey-0 inter-base-semibold leading-none !important;
+      @apply text-grey-0 inter-base-semibold leading-none !important;
+      background-color: #f89b77;
+      color: #2a221f;
     }
   }
 
@@ -477,9 +505,9 @@
 }
 
 .funkyBG {
-  background-color: #d2d2d2;
+  background-color: #d7dadd !important;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-  background-size: 181.5px;
+  background-size: 100px;
 }
 
 .min-h-\[24px\] {
@@ -487,35 +515,31 @@
 }
 
 .min-h-topbar {
-  border-bottom: 1.5px solid #000;
-  background-color: #d2d2d2;
+  border-bottom: 1.5px solid #2a221f;
+  background-color: #d7dadd;
 }
 
 .rounded-soft {
   border-radius: 10px;
-  border: 1.5px solid black;
+  border: 1.5px solid #2a221f;
 }
 
 .text-violet-50 {
-  border: #000 solid 1.5px;
-  color: #000;
-  background-color: #baff29;
+  border: #2a221f solid 1.5px;
+  color: #2a221f;
+  background-color: #f89b77;
 }
 
 .text-violet-60 {
-  border: #000 solid 1.5px;
-  color: #000;
-  background-color: #baff29;
+  border: #2a221f solid 1.5px;
+  color: #2a221f;
+  /* background-color: #f89b77; */
 }
 
 .shadow-violet-60 {
-  --tw-shadow-color: #000;
-  /* --tw-shadow: #000; */
+  --tw-shadow-color: #2a221f;
+  /* --tw-shadow: #2A221F; */
   /* border-radius: 0px; */
-}
-
-.rounded-circle {
-  /* border: #000 solid 1.5px; */
 }
 
 .border-b {
@@ -527,20 +551,22 @@
 }
 
 .pl-2\.5 {
-  color: black;
+  color: #2a221f;
   padding-left: 0.625rem;
 }
 
 .h-full .text-violet-60,
 .h-full > .items-center.bg-grey-0,
 .min-w-sidebar {
-  /* background-color: #fff; */
-  /* color: black; */
+  background-color: #d7dadd !important;
+
+  /* background-color: #F1F3F5; */
+  /* color: #2A221F; */
   border: none;
 }
 
 .bg-grey-0 {
-  background-color: transparent;
+  background-color: #d7dadd !important;
 }
 
 .border {
@@ -548,29 +574,30 @@
 }
 
 .search-icon > .text-grey-40 {
-  color: black;
+  color: #2a221f;
 }
 
 .max-h-topbar {
-  border-bottom: 1.5px solid #000;
-  background-color: #d2d2d2;
+  border-bottom: 1.5px solid #2a221f;
+  background-color: #d7dadd;
 }
 
 .table-container {
   max-width: 93vw;
-  border: 1.5px solid black;
+  border: 1.5px solid #2a221f;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.398);
+  background-color: #f1f3f5;
+
   margin-bottom: 70px;
   backdrop-filter: blur(40px);
 }
 
 .caret-violet-60 {
-  background-color: rgba(255, 255, 255, 0.398);
+  background-color: #d7dadd;
 }
 
 .shadow-dropdown {
-  border: 1.5px solid black;
+  border: 1.5px solid #2a221f;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.398);
   backdrop-filter: blur(40px);
@@ -579,18 +606,18 @@
 .blackBorder {
   border-radius: 20px;
 
-  background-color: rgba(255, 255, 255, 0.398);
+  /* background-color: rgba(255, 255, 255, 0.398); */
   backdrop-filter: blur(40px);
-  border: 1.5px solid #000;
+  border: 1.5px solid #2a221f;
 }
 
 .min-w-sidebar {
-  border-right: 1.5px solid #000;
-  /* background: #000; */
-  background-color: #d2d2d2;
+  border-right: 1.5px solid #2a221f;
+  /* background: #2A221F; */
+  background-color: #d7dadd;
 }
 
-h1 {
+h1 h2 h3 {
   font-family: "Switzer-Bold" !important;
 }
 
@@ -601,8 +628,8 @@ p {
 .logo {
   font-size: 16px;
   font-family: "Switzer-Bold";
-  color: #000;
-  text-shadow: -1px 1px 0 #baff29, -1px 1px 0 #baff29;
+  color: #2a221f;
+  text-shadow: -1px 1px 0 #f89b77, -1px 1px 0 #f89b77;
 }
 
 .logoEnd {
@@ -610,7 +637,7 @@ p {
 }
 
 .logoBox {
-  color: #000;
+  color: #2a221f;
   display: flex;
   align-content: left;
   justify-content: left;
@@ -618,9 +645,9 @@ p {
 }
 
 .button {
-  border: #000 solid 1.5px;
-  color: #000;
-  background-color: #baff29;
+  border: #2a221f solid 1.5px;
+  color: #2a221f;
+  background-color: #f89b77;
   border-radius: 0px !important;
   font-family: "Switzer-Bold";
 }
@@ -632,21 +659,21 @@ p {
 /* .h-full .text-violet-60,
 .h-full > .items-center.bg-grey-0,
 .min-w-sidebar {
-  border-right: 1.5px solid #000;
+  border-right: 1.5px solid #2A221F;
 } */
 
 .min-w-sidebar {
-  /* border-right: 1.5px solid #000; */
-  /* background: #000; */
-  color: #d2d2d2;
+  /* border-right: 1.5px solid #2A221F; */
+  /* background: #2A221F; */
+  background-color: #d7dadd;
 }
 
 .text-grey-50 {
-  color: #000;
+  color: #2a221f;
 }
 
 .card {
-  border: #000 1.5px solid;
+  border: #2a221f 1.5px solid;
   border-radius: 20px;
   display: flex;
   align-items: flex-end;
@@ -665,11 +692,138 @@ p {
   width: 453px;
   padding: 60px;
   margin-left: 100px;
-  /* background-color: #baff29 !important; */
+  /* background-color: #F89B77 !important; */
 }
 
 .containerHundred {
   width: 80vw !important;
   height: 600px;
   overflow: hidden !important;
+}
+
+body {
+  margin: 0;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 90vw;
+  max-width: 260px;
+  height: 300px;
+}
+
+.card {
+  position: relative;
+  background-color: #f1f3f5;
+  width: 80vw;
+  max-width: 260px;
+  height: 300px;
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.infoText {
+  width: 100%;
+  height: 28px;
+  justify-content: center;
+  display: flex;
+  color: #f1f3f5;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+
+.buttons {
+  margin: 20px;
+  display: flex;
+}
+
+.buttons button {
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #f1f3f5;
+  font-size: 18px;
+  background-color: #9198e5;
+  transition: 200ms;
+  margin: 0 10px;
+  font-weight: bolder;
+  width: 160px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 1.1);
+  }
+  30% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  57% {
+    transform: scale(1, 1);
+  }
+  64% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.bg-violet-60 {
+  background-color: #f89b77 !important;
+  color: #2a221f !important;
+}
+
+.bg-violet-60:hover {
+  background: #e08b69 !important;
+}
+
+.bg-grey-5 {
+  background-color: #d7dadd !important;
+}
+
+.input {
+  color: #2a221f;
+  border: 2px #2a221f solid !important;
+  background-color: #d7dadd;
+}
+
+.bgPink {
+  background-color: #f1f3f5 !important;
+}
+
+.productImage {
+  min-width: 80px !important;
+  min-height: 80px !important;
+}
+
+.object-key-val {
+  overflow: hidden;
+}
+
+.searchBox {
+  background-color: #f1f3f5 !important;
+  border: 2px #2a221f solid !important;
+  border-radius: 10px;
 }

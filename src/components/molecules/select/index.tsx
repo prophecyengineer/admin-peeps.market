@@ -135,7 +135,7 @@ const SSelect = React.forwardRef(
         <div
           key={name}
           className={clsx(className, {
-            "bg-white rounded-t-rounded": isFocussed,
+            " rounded-t-rounded": isFocussed,
           })}
         >
           <div className="w-full flex text-grey-50 pr-0.5 justify-between pointer-events-none cursor-pointer mb-2">

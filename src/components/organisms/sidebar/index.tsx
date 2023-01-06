@@ -59,12 +59,12 @@ const Sidebar: React.FC = () => {
             triggerHandler={triggerHandler}
             text={"Discounts"}
           /> */}
-          <SidebarMenuItem
+          {/* <SidebarMenuItem
             pageLink={"/a/filter-products"}
             icon={<GiftIcon size={ICON_SIZE} />}
             triggerHandler={triggerHandler}
             text={"Filter products"}
-          />
+          /> */}
           {/* <SidebarMenuItem
             pageLink={"/a/pricing"}
             icon={<CashIcon size={ICON_SIZE} />}
